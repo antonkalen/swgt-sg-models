@@ -14,8 +14,6 @@ tar_option_set(
   # Set other options as needed.
 )
 
-# Update used packaged for renv
-tar_renv()
 
 # tar_make_clustermq() configuration (okay to leave alone):
 options(clustermq.scheduler = "multicore")
@@ -36,6 +34,6 @@ list(
   tar_target(cleaned_strokes_data, clean_strokes_data(raw_strokes_data)),
 
   # Create classification of competition levels
-  tar_target(comp_levels, create_comp_levels(cleaned_strokes_data))
+  tar_target(comp_levels, create_comp_levels(cleaned_strokes_data), format = "parquet")
 
 )
