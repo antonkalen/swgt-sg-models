@@ -1,9 +1,12 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 clean_strokes_data|function|dff831d407157d00|||||||||||||||
-cleaned_strokes_data|stem|254d8a8372038b78|6b1c5f3287bab3eb|ab839a4ed69cc488|273070467||t19473.3804472079s|86667f20aa5c1fb0|64816632|rds|local|vector|||6.878||
+cleaned_strokes_data|stem|254d8a8372038b78|6b1c5f3287bab3eb|ab839a4ed69cc488|273070467||t19474.329887884s|86667f20aa5c1fb0|64816632|rds|local|vector|||7.227||
+comp_levels|stem|2523ef6fb891a6db|06c5735e11f0b2e7|521de9a9294cca89|122386862||t19474.3559770356s|ef1350513402eb70|7076|rds|local|vector|||0.324||
+create_comp_levels|function|0af6298bc9f1a74e|||||||||||||||
 fix_long_length|function|ea9b089a80b83519|||||||||||||||
 fix_short_length|function|60ebd5e0af746c03|||||||||||||||
 lengthen|function|fddb41744111e555|||||||||||||||
 raw_data|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-979620141|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.01||
 raw_strokes_data|stem|dbd9d161a5be32f8|c96d240bb4281d16|ff16d6017b7c0e1d|-63087096||t19473.3787393467s|1a601df46633f4be|60240963|parquet|local|vector|||1.453||
 strokes_data_file|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-467177754|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.125||
+winsorise|function|f1cdc0db48267676|||||||||||||||

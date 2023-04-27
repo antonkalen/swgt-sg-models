@@ -32,6 +32,7 @@ list(
   # Clean data
   tar_target(cleaned_strokes_data, clean_strokes_data(raw_strokes_data)),
 
-  # Create
+  # Create classification of competition levels
+  tar_target(comp_levels, create_comp_levels(cleaned_strokes_data))
 
 )
