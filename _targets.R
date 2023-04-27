@@ -14,6 +14,9 @@ tar_option_set(
   # Set other options as needed.
 )
 
+# Update used packaged for renv
+tar_renv()
+
 # tar_make_clustermq() configuration (okay to leave alone):
 options(clustermq.scheduler = "multicore")
 
