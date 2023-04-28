@@ -7,6 +7,9 @@ clean_strokes_data <- function(data) {
       season = lubridate::year(round_date),
       hole_length = if_else(from_location == "Tee", hole_length, NA),
 
+      # Remove negative distances
+      across(c(hole_length, from_distance, result_distance), abs),
+
       # Change hole length into meters
       across(c(hole_length, from_distance, result_distance), \(x) x / 100),
 

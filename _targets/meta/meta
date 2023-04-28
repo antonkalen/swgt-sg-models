@@ -1,12 +1,13 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-clean_strokes_data|function|dff831d407157d00|||||||||||||||
-cleaned_strokes_data|stem|254d8a8372038b78|6b1c5f3287bab3eb|ab839a4ed69cc488|273070467||t19474.3626078561s|86667f20aa5c1fb0|64816632|rds|local|vector|||7.048||
-comp_levels|stem|8338b807387caa2b|06c5735e11f0b2e7|521de9a9294cca89|122386862||t19474.3598974018s|c0eabe80583c7b96|14236|parquet|local|vector|||0.327||
+clean_strokes_data|function|a61ed9a75552f73b|||||||||||||||
+cleaned_strokes_data|stem|31151a5b24c3ee76|6b1c5f3287bab3eb|3a6f6caaa6ef8caa|273070467||t19475.5103921388s|a7f0faf851ab765e|64815624|rds|local|vector|||3.87||
+comp_levels|stem|2523ef6fb891a6db|06c5735e11f0b2e7|1ab80517180f4096|122386862||t19475.5103960438s|ef1350513402eb70|7076|rds|local|vector|||0.298||
 create_comp_levels|function|0af6298bc9f1a74e|||||||||||||||
 fix_long_length|function|ea9b089a80b83519|||||||||||||||
 fix_short_length|function|60ebd5e0af746c03|||||||||||||||
 lengthen|function|fddb41744111e555|||||||||||||||
 raw_data|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-979620141|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.01||
-raw_strokes_data|stem|dbd9d161a5be32f8|c96d240bb4281d16|ff16d6017b7c0e1d|-63087096||t19473.3787393467s|1a601df46633f4be|60240963|parquet|local|vector|||1.453||
+raw_strokes_data|stem|69947ab36bc8933b|c96d240bb4281d16|ff16d6017b7c0e1d|-63087096||t19474.3658389258s|9d98b3c69bcc6143|49485980|rds|local|vector|||1.599||
+strokes_data_comp_level|stem|b7f74105c9332a4c|b86ea4bbad16a210|48acecaa1ca8e044|1563808729||t19475.5105339591s|f2f07fdb30f81c03|64827957|rds|local|vector|||0.39||
 strokes_data_file|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-467177754|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.125||
 winsorise|function|f1cdc0db48267676|||||||||||||||
