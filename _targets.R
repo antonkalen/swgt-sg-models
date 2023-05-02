@@ -28,12 +28,16 @@ tar_source()
 list(
   # Reads the raw strokes data into the pipeline
   tar_target(strokes_data_file, here("data/swgt-data.csv.gz"), format = "file"),
-  tar_target(raw_strokes_data, read_csv_arrow(strokes_data_file), format = "parquet"),
+  tar_target(raw_strokes_data, read_csv_arrow(strokes_data_file)),
 
   # Clean data
   tar_target(cleaned_strokes_data, clean_strokes_data(raw_strokes_data)),
 
-  # Create classification of competition levels
-  tar_target(comp_levels, create_comp_levels(cleaned_strokes_data), format = "parquet")
+  # Create classification of competition levels and merge back with clean data
+  tar_target(comp_levels, create_comp_levels(cleaned_strokes_data)),
+  tar_target(
+    strokes_data_comp_level,
+    left_join(comp_levels, cleaned_strokes_data, by = join_by(user_pk, season))
+  )
 
 )

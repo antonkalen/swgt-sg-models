@@ -3,32 +3,23 @@ clean_strokes_data <- function(data) {
   cleaned_names <- janitor::clean_names(data)
 
   calculated_data <- cleaned_names |>
+    # Remove penalty shots recorded as row
+    tidyr::drop_na(from_location) |>
     mutate(
       season = lubridate::year(round_date),
-      hole_length = if_else(from_location == "Tee", hole_length, NA),
 
       # Remove negative distances
-      across(c(hole_length, from_distance, result_distance), abs),
+      from_distance = abs(from_distance),
 
-      # Change hole length into meters
-      across(c(hole_length, from_distance, result_distance), \(x) x / 100),
+      # Convert distance to meters
+      from_distance = from_distance / 100,
 
-      # Fix too short hole lengths
-      across(c(hole_length, from_distance), ~ fix_short_length(.x, hole_par)),
+      # fix too short and long distances
+      FromDistance = lengthen(from_distance, hole_par, from_location),
+      FromDistance = shorten(from_distance, hole_par, from_location),
 
-      # # Fix too long hole length and shot distances
-      # # (We expect everything over 900 to have a 0 too much.
-      # #  Checked manually agains par of the holes)
-      # # Do this iteratively to catch with two 0 too much and so forth.
-      across(c(hole_length, from_distance, result_distance), ~ fix_long_length(.x)),
-
-      # Estimate drive length
-      drive_length = if_else(
-        from_location == "Tee" & is.na(shot_type),
-        from_distance - result_distance,
-        NA
-      ),
-      drive_length = if_else(drive_length <= 0, NA, drive_length),
+      # Update result distance to match next shots from distance
+      ResultDistance = if_else(result_location == "Hole", 0.0, lead(from_distance)),
 
       # Calculate score SG difference
       hole_score_diff = hole_score - hole_par,
@@ -53,27 +44,31 @@ clean_strokes_data <- function(data) {
 
 # Helper functions --------------------------------------------------------
 
-lengthen <- function(length, par) {
-  if_else(
-    par == 3 & length < 20 | par == 4 & length < 40 | par >= 5 & length < 100,
-    length * 10,
-    length
+shorten <- function(length, par, location) {
+  x <- case_when(
+    location == "Tee" & length > 900 ~ length / 10,
+    location %in% c("Ruff", "Fairway", "Bunker") & length > 600 ~ length / 10,
+    location == "Green" & length > 50 ~ length / 10,
+    TRUE ~ length
   )
+
+  if (!all(x == length)) {
+    shorten(x, par, location)
+  } else x
 }
 
-fix_short_length <- function(length, par) {
-  length_it1 <- lengthen(length, par)
-  length_it2 <- lengthen(length_it1, par)
-  length_it3 <- lengthen(length_it2, par)
-  length_it4 <- lengthen(length_it3, par)
-  length_it4
+lengthen <- function(length, par, location) {
+  x <- case_when(
+    location == "Tee" & par == 3 & length < 20 ~ length * 10,
+    location == "Tee" & par == 4 & length < 40 ~ length * 10,
+    location == "Tee" & par >= 5 & length < 100 ~ length * 10,
+    location %in% c("Ruff", "Fairway", "Bunker") & length < 2 ~ length * 10,
+    TRUE ~ length
+  )
+
+  if (!all(x == length)) {
+    lengthen(x, par, location)
+  } else x
 }
 
-# Create function for shortening
-fix_long_length <- function(length) {
-  length_it1 <- if_else(length >= 900, length / 10, length)
-  length_it2 <- if_else(length_it1 >= 1000, length_it1 / 10, length_it1)
-  length_it3 <- if_else(length_it2 >= 1000, length_it2 / 10, length_it2)
-  length_it4 <- if_else(length_it3 >= 1000, length_it3 / 10, length_it3)
-  length_it4
-}
+
