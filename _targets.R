@@ -38,6 +38,9 @@ list(
   tar_target(
     strokes_data_comp_level,
     left_join(comp_levels, cleaned_strokes_data, by = join_by(user_pk, season))
-  )
+  ),
+
+  # Split training/validation
+  tar_target(strokes_data_binned, bin_strokes_data(strokes_data_comp_level))
 
 )
