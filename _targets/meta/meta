@@ -1,4 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+bin_strokes_data|function|70c4c4baf71a2855|||||||||||||||
 clean_strokes_data|function|ad9df7e8a7a23c41|||||||||||||||
 cleaned_strokes_data|stem|003fdaad724eed8c|6b1c5f3287bab3eb|2c5f53cc605667d8|273070467||t19480.2889652587s|719f41db38212a7b|61174387|rds|local|vector|||5.368||
 comp_levels|stem|708f515506b7ae3d|06c5735e11f0b2e7|a5ec610575367f21|122386862||t19480.2889692859s|158401563ddacb2d|7033|rds|local|vector|||0.301||
@@ -9,6 +10,7 @@ lengthen|function|ef5deff6bfd808e9|||||||||||||||
 raw_data|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-979620141|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.01||
 raw_strokes_data|stem|69947ab36bc8933b|c96d240bb4281d16|ff16d6017b7c0e1d|-63087096||t19474.3658389258s|9d98b3c69bcc6143|49485980|rds|local|vector|||1.599||
 shorten|function|57612f49611caa69|||||||||||||||
+strokes_data_binned|stem|93746c4ea53493a9|f1866da979fb4969|d2282668406804f2|2067091402||t19480.3330470392s|a6fad9b427302f07|71792242|rds|local|vector|||3.418||
 strokes_data_comp_level|stem|ed996758a2a8b5fc|b86ea4bbad16a210|278cbf2d6fcdf5c2|1563808729||t19480.2891039904s|281c622c954a4acf|61188090|rds|local|vector|||0.412||
 strokes_data_file|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-467177754|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.125||
 winsorise|function|f1cdc0db48267676|||||||||||||||
