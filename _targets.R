@@ -9,7 +9,7 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-  packages = c("here", "arrow", "dplyr") # packages that your targets need to run
+  packages = c("here", "arrow", "dplyr", "rsample") # packages that your targets need to run
   # format = "parquet" # default storage format
   # Set other options as needed.
 )
@@ -41,6 +41,11 @@ list(
   ),
 
   # Split training/validation
-  tar_target(strokes_data_binned, bin_strokes_data(strokes_data_comp_level))
-
+  tar_target(strokes_data_binned, bin_strokes_data(strokes_data_comp_level)),
+  tar_target(
+    train_test_split,
+    initial_split(strokes_data_binned, prop = 3/4, strata = strata, pool = 0.05)
+  ),
+  tar_target(training_data, training(train_test_split)),
+  tar_target(testing_data, testing(train_test_split))
 )

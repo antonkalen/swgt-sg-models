@@ -13,4 +13,7 @@ shorten|function|57612f49611caa69|||||||||||||||
 strokes_data_binned|stem|93746c4ea53493a9|f1866da979fb4969|d2282668406804f2|2067091402||t19480.3330470392s|a6fad9b427302f07|71792242|rds|local|vector|||3.418||
 strokes_data_comp_level|stem|ed996758a2a8b5fc|b86ea4bbad16a210|278cbf2d6fcdf5c2|1563808729||t19480.2891039904s|281c622c954a4acf|61188090|rds|local|vector|||0.412||
 strokes_data_file|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-467177754|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.125||
+testing_data|stem|2e9ab5365b4a6c0f|878cc650e188409d|7d77874583e71825|2072656239||t19480.3561134799s|97d677479624a6fb|22282442|rds|local|vector|||0.251||
+train_test_split|stem|e059297514c0bf65|a0d57bb403b6d39d|fd589354153d1690|-1768825896||t19480.3560580836s|2cfa944dc72cc66f|79386402|rds|local|vector|||1.337|Stratifying groups that make up 5 of the data may be statistically risky.36m39m Consider increasing pool to at least 0.1|
+training_data|stem|56ce9ea3a5d2a9f5|593c939d2ea726b5|9058fcbe8c029162|-408453539||t19480.3562561042s|1b4c2210a385ce43|58540954|rds|local|vector|||0.483||
 winsorise|function|f1cdc0db48267676|||||||||||||||
