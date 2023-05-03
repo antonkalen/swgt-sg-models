@@ -15,11 +15,11 @@ clean_strokes_data <- function(data) {
       from_distance = from_distance / 100,
 
       # fix too short and long distances
-      FromDistance = lengthen(from_distance, hole_par, from_location),
-      FromDistance = shorten(from_distance, hole_par, from_location),
+      from_distance = lengthen(from_distance, hole_par, from_location),
+      from_distance = shorten(from_distance, hole_par, from_location),
 
       # Update result distance to match next shots from distance
-      ResultDistance = if_else(result_location == "Hole", 0.0, lead(from_distance)),
+      result_distance = if_else(result_location == "Hole", 0.0, lead(from_distance)),
 
       # Calculate score SG difference
       hole_score_diff = hole_score - hole_par,
