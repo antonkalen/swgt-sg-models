@@ -8,7 +8,10 @@ library(targets)
 
 tar_option_set(
   packages = c("here", "arrow", "dplyr", "rsample"),
-  # format = "parquet" # default storage format
+  format = "parquet",
+  resources = tar_resources(
+    parquet =  tar_resources_parquet(compression = "gzip")
+  ),
   seed = 746
 )
 
@@ -40,7 +43,13 @@ list(
   tar_target(strokes_data_binned, bin_strokes_data(strokes_data_comp_level)),
   tar_target(
     train_test_split,
-    initial_split(strokes_data_binned, prop = 3/4, strata = strata, pool = 0.05)
+    initial_split(
+      strokes_data_binned,
+      prop = 3/4,
+      strata = strata,
+      pool = 0.05
+    ),
+    format = "qs"
   ),
   tar_target(training_data, training(train_test_split)),
   tar_target(testing_data, testing(train_test_split))
