@@ -50,6 +50,7 @@ clean_strokes_data <- function(data) {
       hole_par,
       shot_pk,
       shot_number_hole,
+      shots_left,
       from_location,
       result_location,
       from_distance,
