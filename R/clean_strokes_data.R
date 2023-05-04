@@ -39,7 +39,26 @@ clean_strokes_data <- function(data) {
       penalty_reason = factor(penalty_reason)
     )
 
-  cleaned_data
+  selected_data <- cleaned_data |>
+    select(
+      user_pk,
+      sex,
+      age,
+      season,
+      round_pk,
+      hole_number_played,
+      hole_par,
+      shot_pk,
+      shot_number_hole,
+      from_location,
+      result_location,
+      from_distance,
+      result_distance,
+      shot_type,
+      score_sg_diff
+    )
+
+  selected_data
 }
 
 

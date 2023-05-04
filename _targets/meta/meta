@@ -1,8 +1,8 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 bin_strokes_data|function|70c4c4baf71a2855|||||||||||||||
-clean_strokes_data|function|7266f8a4ce575bc5|||||||||||||||
-cleaned_strokes_data|stem|9e0c799fe86c30b2|6b1c5f3287bab3eb|1feff30317a3eac2|-127669221||t19481.6315930614s|630a88cfae9c0646|62595212|rds|local|vector|||4.871||
-comp_levels|stem|708f515506b7ae3d|06c5735e11f0b2e7|81ff2e8b4fb5de63|-907255426||t19481.631596138s|158401563ddacb2d|7033|rds|local|vector|||0.235||
+clean_strokes_data|function|897ae5ad8dc78419|||||||||||||||
+cleaned_strokes_data|stem|ce672474fc9a8dc6|6b1c5f3287bab3eb|f46f9878cd3f7945|-127669221||t19481.6392597017s|eb03ecab24d4dd93|35922689|rds|local|vector|||4.839||
+comp_levels|stem|708f515506b7ae3d|06c5735e11f0b2e7|09f51504d2916324|-907255426||t19481.6392632852s|158401563ddacb2d|7033|rds|local|vector|||0.287||
 create_comp_levels|function|0af6298bc9f1a74e|||||||||||||||
 fix_long_length|function|ea9b089a80b83519|||||||||||||||
 fix_short_length|function|4d55b00a49bae90f|||||||||||||||
@@ -10,10 +10,10 @@ lengthen|function|ef5deff6bfd808e9|||||||||||||||
 raw_data|stem|5b6fb2760bc9653b|1715b395e1e2320c|4e3739ef91745af0|-979620141|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19416.5450055004s|2ab39f9b336d2499|60315551|file|local|vector|||0.01||
 raw_strokes_data|stem|0faa38270f7900ba|c96d240bb4281d16|23846960078df723|2112355243||t19481.6148577492s|4b2315ef9351aa6a|50049365|rds|local|vector|||1.35||
 shorten|function|57612f49611caa69|||||||||||||||
-strokes_data_binned|stem|d165433d6da46284|f1866da979fb4969|4778cf59a4feebf7|1752567970||t19481.6319350819s|417808595c8a2419|73206320|rds|local|vector|||3.318||
-strokes_data_comp_level|stem|4c39f2c87edebaae|b86ea4bbad16a210|59e2c90e86b55924|2134296798||t19481.6317334017s|4908df9cd7ed9b68|62601300|rds|local|vector|||0.34||
+strokes_data_binned|stem|0facf1c32bf702bb|f1866da979fb4969|4ecd2c2d4bdeace6|1752567970||t19481.6394990433s|db2a0658ad2e7986|46541427|rds|local|vector|||3.398||
+strokes_data_comp_level|stem|0a977f81c89388c3|b86ea4bbad16a210|d803650fd71b1b3e|2134296798||t19481.6393473551s|3635996f64a178e5|35939514|rds|local|vector|||0.221||
 strokes_data_file|stem|90c63f567ee7a019|1715b395e1e2320c|4e3739ef91745af0|2144975757|/Users/sok-anton/Documents/repos/swgt-sg-models/data/swgt-data.csv.gz|t19480.382654691s|11192bb5b91b6414|62377589|file|local|vector|||0.33||
-testing_data|stem|32d4c5c5c3adeeeb|878cc650e188409d|11c583664a29d67b|-741271430||t19481.6321909327s|5cd66846e61cb2d4|23466033|rds|local|vector|||0.216||
-train_test_split|stem|8a15cac7387ad5c8|a0d57bb403b6d39d|0b9b4657b0a689ef|-416504152||t19481.6321319002s|ddd38037d3f87d62|80801244|rds|local|vector|||1.348|Stratifying groups that make up 5 of the data may be statistically risky.36m39m Consider increasing pool to at least 0.1|
-training_data|stem|52a8a2caed65d369|593c939d2ea726b5|9a261bf10ab9d735|1946905108||t19481.6323351791s|628b170805d551fe|60958728|rds|local|vector|||0.223||
+testing_data|stem|30c0b1a60366fe1a|878cc650e188409d|9312c0f385370cc8|-741271430||t19481.6396941295s|82bf05546652e866|14214038|rds|local|vector|||0.375||
+train_test_split|stem|bfa7e0d130006fa7|a0d57bb403b6d39d|d269639261dabeda|-416504152||t19481.6396503853s|bcda8fe666c78dfd|54138289|rds|local|vector|||1.384|Stratifying groups that make up 5 of the data may be statistically risky.36m39m Consider increasing pool to at least 0.1|
+training_data|stem|8b7b1b5fbf948a22|593c939d2ea726b5|a75208a0edf59b84|1946905108||t19481.6397934814s|9be302f8a4516b9b|38170842|rds|local|vector|||0.29||
 winsorise|function|f1cdc0db48267676|||||||||||||||
