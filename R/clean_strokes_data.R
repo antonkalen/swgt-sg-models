@@ -8,6 +8,9 @@ clean_strokes_data <- function(data) {
     mutate(
       season = lubridate::year(round_date),
 
+      # Calculate shots left to hole
+      shots_left = hole_score - shot_number_hole + 1,
+
       # Remove negative distances
       from_distance = abs(from_distance),
 
