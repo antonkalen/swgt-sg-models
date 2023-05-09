@@ -45,7 +45,7 @@ list(
     train_test_split,
     initial_split(
       strokes_data_binned,
-      prop = 3/4,
+      prop = 3 / 4,
       strata = strata,
       pool = 0.05
     ),
